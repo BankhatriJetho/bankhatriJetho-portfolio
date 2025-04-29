@@ -1,0 +1,157 @@
+/* 
+======================
+Responsive Styles - Updated for side-by-side About/Skills layout
+======================
+*/
+
+/* Large Screens (Desktops) */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 992px;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 768px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Stack About and Skills sections on tablets */
+    .about-skills-wrapper {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .section-title {
+        text-align: left;
+        display: inline-block;
+    }
+    
+    /* Hide social sidebar on tablets */
+    .social-sidebar {
+        display: none;
+    }
+}
+
+/* Small Screens (Mobile Landscape) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: center;
+    }
+    
+    .btn-outline {
+        margin-right: 0;
+        width: 200px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-screen {
+        max-width: 100%;
+    }
+    
+    .project-card {
+        padding: var(--spacing-sm);
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .project-links a {
+        width: 100%;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+    }
+    
+    .experience-content {
+        max-width: 100%;
+    }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .skill-tags {
+        justify-content: flex-start;
+    }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+    
+    .project-screen-header {
+        padding: 0.5rem;
+    }
+    
+    .screen-title {
+        margin-left: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+    
+    .screen-dots span {
+        width: 10px;
+        height: 10px;
+    }
+}

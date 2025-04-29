@@ -1,0 +1,570 @@
+/* CSS Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #46307b;
+    --secondary-color: #ff803c; 
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --light-color: #ffffff;
+    --border-color: #e0e0e0;
+    --gray-color: #6c757d;
+    --hover-color: #382761;
+
+    /* Skill tag colors */
+    --java-color: #f89820;
+    --python-color: #4B8BBE;
+    --javascript-color: #F0DB4F;
+    --html-color: #E44D26;
+    --css-color: #264de4;
+    --sql-color: #00758F;
+    --json-color: #000000;
+    --spring-color: #6DB33F;
+    --react-color: #61DAFB;
+    --junit-color: #25A162;
+    --mockito-color: #C5D9E7;
+    --hibernate-color: #BCB7A9;
+    --git-color: #F05032;
+    --github-color: #181717;
+    --postgres-color: #336791;
+    --mysql-color: #4479A1;
+    --postman-color: #FF6C37;
+    --docker-color: #2496ED;
+    --intellij-color: #000000;
+    --vscode-color: #007ACC;
+
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+
+    /* Box Shadow */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: var(--spacing-lg);
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    color: var(--text-color);
+    border-bottom: 3px solid var(--text-color);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    text-transform: lowercase;
+}
+
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+.highlight {
+    color: var(--secondary-color);
+}
+
+/* Social Sidebar */
+.social-sidebar {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    z-index: 100;
+}
+
+.social-sidebar a {
+    font-size: 2.0rem;
+    color: var(--primary-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    margin-right: var(--spacing-sm);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: var(--light-color);
+}
+
+.navbar {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: lowercase;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* About and Skills Side by Side Layout */
+.about-skills-container {
+    background-color: var(--background-color);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.about-skills-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+}
+
+.about-section {
+    flex: 1;
+}
+
+.skills-section {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.about-text a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: opacity 0.3s ease;
+}
+
+.about-text a:hover {
+    opacity: 0.8;
+}
+
+/* Skills Section */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.skill-category h3 {
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.skill-category h3 i {
+    color: var(--primary-color);
+    margin-right: var(--spacing-xs);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.skill-tag {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px; /* More rounded like Arpan's design */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Colored skill tags */
+.skill-tag.java {
+    background-color: rgba(248, 152, 32, 0.1);
+    border-color: var(--java-color);
+    color: var(--java-color);
+}
+
+.skill-tag.python {
+    background-color: rgba(75, 139, 190, 0.1);
+    border-color: var(--python-color);
+    color: var(--python-color);
+}
+
+.skill-tag.javascript {
+    background-color: rgba(240, 219, 79, 0.1);
+    border-color: var(--javascript-color);
+    color: var(--javascript-color);
+}
+
+.skill-tag.html {
+    background-color: rgba(228, 77, 38, 0.1);
+    border-color: var(--html-color);
+    color: var(--html-color);
+}
+
+.skill-tag.css {
+    background-color: rgba(38, 77, 228, 0.1);
+    border-color: var(--css-color);
+    color: var(--css-color);
+}
+
+.skill-tag.sql {
+    background-color: rgba(0, 117, 143, 0.1);
+    border-color: var(--sql-color);
+    color: var(--sql-color);
+}
+
+.skill-tag.json {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: var(--json-color);
+    color: var(--json-color);
+}
+
+.skill-tag.spring {
+    background-color: rgba(109, 179, 63, 0.1);
+    border-color: var(--spring-color);
+    color: var(--spring-color);
+}
+
+.skill-tag.react {
+    background-color: rgba(97, 218, 251, 0.1);
+    border-color: var(--react-color);
+    color: var(--react-color);
+}
+
+.skill-tag.junit {
+    background-color: rgba(37, 161, 98, 0.1);
+    border-color: var(--junit-color);
+    color: var(--junit-color);
+}
+
+.skill-tag.mockito {
+    background-color: rgba(197, 217, 231, 0.1);
+    border-color: var(--mockito-color);
+    color: var(--mockito-color);
+}
+
+.skill-tag.hibernate {
+    background-color: rgba(188, 183, 169, 0.1);
+    border-color: var(--hibernate-color);
+    color: var(--hibernate-color);
+}
+
+.skill-tag.git {
+    background-color: rgba(240, 80, 50, 0.1);
+    border-color: var(--git-color);
+    color: var(--git-color);
+}
+
+.skill-tag.github {
+    background-color: rgba(24, 23, 23, 0.1);
+    border-color: var(--github-color);
+    color: var(--github-color);
+}
+
+.skill-tag.postgres {
+    background-color: rgba(51, 103, 145, 0.1);
+    border-color: var(--postgres-color);
+    color: var(--postgres-color);
+}
+
+.skill-tag.mysql {
+    background-color: rgba(68, 121, 161, 0.1);
+    border-color: var(--mysql-color);
+    color: var(--mysql-color);
+}
+
+.skill-tag.postman {
+    background-color: rgba(255, 108, 55, 0.1);
+    border-color: var(--postman-color);
+    color: var(--postman-color);
+}
+
+.skill-tag.docker {
+    background-color: rgba(36, 150, 237, 0.1);
+    border-color: var(--docker-color);
+    color: var(--docker-color);
+}
+
+.skill-tag.intellij {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: var(--intellij-color);
+    color: var(--intellij-color);
+}
+
+.skill-tag.vscode {
+    background-color: rgba(0, 122, 204, 0.1);
+    border-color: var(--vscode-color);
+    color: var(--vscode-color);
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+/* Projects Section */
+.projects {
+    background-color: var(--background-color);
+}
+
+.project-screen {
+    background-color: #f5f5f5;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-screen-header {
+    background-color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.screen-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.screen-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff6058;
+}
+
+.screen-dots span:nth-child(2) {
+    background-color: #ffbd2e;
+}
+
+.screen-dots span:nth-child(3) {
+    background-color: #28ca41;
+}
+
+.screen-title {
+    margin-left: var(--spacing-md);
+    font-weight: 500;
+}
+
+.project-screen-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.project-card {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-description {
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.project-tech span {
+    background-color: var(--background-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* Experience Section */
+.experience {
+    background-color: var(--background-color);
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 800px;
+}
+
+.experience-item {
+    background-color: var(--light-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+}
+
+.job-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.company-date {
+    font-weight: 500;
+    color: var(--gray-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.job-description {
+    margin-bottom: var(--spacing-sm);
+}
+
+.job-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.job-tech span {
+    background-color: var(--background-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color);
+    color: var(--light-color);
+    padding: var(--spacing-md) 0;
+    text-align: center;
+}
