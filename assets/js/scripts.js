@@ -1,25 +1,5 @@
-/**
- * Main JavaScript for Portfolio Website
- */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Navigation Toggle for Mobile
-    const navbarToggle = document.querySelector('.navbar-toggle');
-    const navbarItems = document.querySelector('.navbar-items');
-    
-    if (navbarToggle && navbarItems) {
-        navbarToggle.addEventListener('click', function() {
-            navbarItems.classList.toggle('active');
-        });
-    }
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.navbar') && navbarItems.classList.contains('active')) {
-            navbarItems.classList.remove('active');
-        }
-    });
-    
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -33,60 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
-                    // Account for fixed navbar
-                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                     
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
                     });
-                    
-                    // Close mobile menu after clicking a link
-                    if (navbarItems.classList.contains('active')) {
-                        navbarItems.classList.remove('active');
-                    }
                 }
             }
         });
     });
-    
-    // Form submission handling
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Basic form validation
-            if (!name || !email || !message) {
-                alert('Please fill out all fields.');
-                return;
-            }
-            
-            // Email validation with regex
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Form submission logic
-            // In a real implementation, you would use AJAX to send the form data to a server
-            console.log('Form submitted with:', { name, email, message });
-            
-            // Reset form after submission
-            contactForm.reset();
-            
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-        });
-    }
     
     // Add active class to current section in navigation
     function highlightNavigation() {
@@ -96,12 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get current scroll position
         let scrollPosition = window.scrollY;
         
-        // Add navbar height to account for fixed position
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        
         // Highlight the appropriate nav item based on the current section
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - navbarHeight - 50; // 50px offset for better UX
+            const sectionTop = section.offsetTop - 100; // 100px offset for better UX
             const sectionBottom = sectionTop + section.offsetHeight;
             const sectionId = section.getAttribute('id');
             
@@ -125,12 +58,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add CSS styling for active navigation link
     const style = document.createElement('style');
     style.textContent = `
-        .navbar-items a.active {
+        a.active {
             color: var(--primary-color);
-        }
-        .navbar-items a.active::after {
-            width: 100%;
         }
     `;
     document.head.appendChild(style);
+    
+    // Animate skill tags on hover
+    const skillTags = document.querySelectorAll('.skill-tag');
+    
+    skillTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        tag.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Animate project cards on hover
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            this.style.boxShadow = '0 15px 25px rgba(0, 0, 0, 0.1)';
+            this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        });
+    });
 });

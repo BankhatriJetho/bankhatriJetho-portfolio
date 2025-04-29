@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Anil Khatri | Portfolio</title>
     <meta name="description" content="Personal portfolio showcasing my projects, skills, and experience.">
     
     <!-- Favicon -->
@@ -22,136 +22,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-brand">
-                <a href="#" class="logo">Your Name</a>
-            </div>
-            <div class="navbar-menu">
-                <ul class="navbar-items">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="navbar-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+    <!-- Social Links Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://github.com/BankhatriJetho" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:khatrianil977@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/anil-khatri-/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
-                <p class="hero-description">Software Developer | Web Designer | Tech Enthusiast</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <div class="hero-text">
+                    <p class="greeting">hi! i am</p>
+                    <h1>anil khatri</h1>
+                    <p class="hero-description">i solve problems with <span class="highlight">java, spring boot</span>, and structured backend thinking.</p>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-outline">about →</a>
+                        <a href="#experience" class="btn btn-outline">experience →</a>
+                        <a href="#projects" class="btn btn-outline">projects →</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/programmer-gif.gif" alt="Programmer illustration">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- About and Skills Section -->
+    <section class="about-skills-container" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/images/profile.jpg" alt="Your Name">
-                </div>
-                <div class="about-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat, 
-                        nisl vel tincidunt interdum, augue est facilisis massa, non consequat 
-                        nisi lectus sit amet felis. Suspendisse eget consectetur ex. 
-                    </p>
-                    <p>
-                        Nullam elementum, diam non commodo rutrum, eros arcu convallis turpis, 
-                        eu aliquam lectus velit sed quam. Cras ultricies, felis et tempor tempor, 
-                        nibh nulla posuere libero, id commodo massa libero in leo.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <p>HTML</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <p>CSS</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <p>JavaScript</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <p>Python</p>
+            <div class="about-skills-wrapper">
+                <!-- About Section -->
+                <div class="about-section">
+                    <h2 class="section-title">about</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                Hey there! I'm a Java backend developer who loves building real-world applications with
+                                Java, Spring Boot, REST APIs, and databases. I enjoy solving problems, writing clean and reliable code,
+                                and learning something new with every project.
+                            </p>
+                            <p>
+                                In my free time, you'll probably find me lost in the soulful sounds of the <span class="highlight">Sarangi</span>,
+                                cheering on <span class="highlight">FC Barcelona, or hitting the volleyball court</span> with friends.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <p>React</p>
+                
+                <!-- Skills Section -->
+                <div class="skills-section">
+                    <h2 class="section-title">skills</h2>
+                    <div class="skills-content">
+                        <div class="skill-category">
+                            <h3><i class="fas fa-chevron-right"></i> Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag java">Java</span>
+                                <span class="skill-tag sql">SQL</span>
+                                <span class="skill-tag json">JSON</span>
+                                <span class="skill-tag html">HTML</span>
+                                <span class="skill-tag css">CSS</span>
+                                <span class="skill-tag javascript">JavaScript</span>
+                                <span class="skill-tag python">Python</span>
+                            </div>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <p>Node.js</p>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-chevron-right"></i> Frameworks & Libraries</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag spring">Spring Framework</span>
+                                <span class="skill-tag spring">Spring Boot</span>
+                                <span class="skill-tag spring">Spring Data JPA</span>
+                                <span class="skill-tag spring">Spring Security</span>
+                                <span class="skill-tag react">React</span>
+                                <span class="skill-tag junit">JUnit5</span>
+                                <span class="skill-tag mockito">Mockito</span>
+                                <span class="skill-tag hibernate">Hibernate</span>
+                            </div>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-bootstrap"></i>
-                            <p>Bootstrap</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <p>Flask</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <p>Git</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-github"></i>
-                            <p>GitHub</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <p>SQL</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-terminal"></i>
-                            <p>Command Line</p>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-chevron-right"></i> Tools & Technologies</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag git">Git</span>
+                                <span class="skill-tag github">GitHub</span>
+                                <span class="skill-tag postgres">PostgreSQL</span>
+                                <span class="skill-tag mysql">MySQL</span>
+                                <span class="skill-tag postman">Postman</span>
+                                <span class="skill-tag docker">Docker</span>
+                                <span class="skill-tag intellij">IntelliJ IDEA</span>
+                                <span class="skill-tag vscode">VS Code</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,73 +123,105 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">projects</h2>
             <div class="projects-content">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project1.jpg" alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Project Title 1</h3>
-                        <p class="project-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Fusce volutpat, nisl vel tincidunt interdum, augue est facilisis massa.
-                        </p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                <!-- Project Screen -->
+                <div class="project-screen">
+                    <div class="project-screen-header">
+                        <div class="screen-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="btn btn-outline">View Live</a>
-                            <a href="#" target="_blank" class="btn btn-outline">Source Code</a>
-                        </div>
+                        <div class="screen-title">My Projects</div>
                     </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project2.jpg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Project Title 2</h3>
-                        <p class="project-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Fusce volutpat, nisl vel tincidunt interdum, augue est facilisis massa.
-                        </p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                    <div class="project-screen-content">
+                        <!-- Project 1 -->
+                        <div class="project-card">
+                            <h3 class="project-title">Inventory Management Application</h3>
+                            <p class="project-description">
+                                A full-stack application with React and Spring Boot supporting JWT authentication, 
+                                product CRUD operations, CSV import/export, search, filtering, and pagination.
+                            </p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>TypeScript</span>
+                                <span>PostgreSQL</span>
+                                <span>CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/BankhatriJetho/agm_webapp" target="_blank" class="btn btn-outline">Source Code</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="btn btn-outline">View Live</a>
-                            <a href="#" target="_blank" class="btn btn-outline">Source Code</a>
+                        
+                        <!-- Project 2 -->
+                        <div class="project-card">
+                            <h3 class="project-title">Don't Wreck My House</h3>
+                            <p class="project-description">
+                                A Spring Boot reservation management system featuring CRUD operations, layered 
+                                architecture, file-backed repositories, and Spring Dependency Injection.
+                            </p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>JUnit5</span>
+                                <span>Maven</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/BankhatriJetho/Don-t-Wreck-My-House" target="_blank" class="btn btn-outline">Source Code</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/project3.jpg" alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">Project Title 3</h3>
-                        <p class="project-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Fusce volutpat, nisl vel tincidunt interdum, augue est facilisis massa.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>SQLite</span>
+                        
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <h3 class="project-title">Sustainable Foraging Tracker</h3>
+                            <p class="project-description">
+                                A Java application to manage foragers, forageable items, and successful forages with
+                                clean data handling, BigDecimal financials, and Spring-based wiring.
+                            </p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Core</span>
+                                <span>JUnit5</span>
+                                <span>Maven</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/BankhatriJetho/sustainable-foraging" target="_blank" class="btn btn-outline">Source Code</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank" class="btn btn-outline">View Live</a>
-                            <a href="#" target="_blank" class="btn btn-outline">Source Code</a>
+                        
+                        <!-- Project 4 -->
+                        <div class="project-card">
+                            <h3 class="project-title">Solar Farm Panel Management</h3>
+                            <p class="project-description">
+                                A Java system to track and manage solar panels with structured repositories, service
+                                layers, input validation, and real-world error handling.
+                            </p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Junit 5</span>
+                                <span>Maven</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btn btn-outline">Source Code</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 5 -->
+                        <div class="project-card">
+                            <h3 class="project-title">Gomoku Board Game</h3>
+                            <p class="project-description">
+                                A two-player console-based Gomoku game implementing turn-based mechanics, input validation, 
+                                MVC-inspired design, and win detection algorithms.
+                            </p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>JUnit5</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/BankhatriJetho/Gomoku-Console-Game" target="_blank" class="btn btn-outline">Source Code</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,110 +232,19 @@
     <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
+            <h2 class="section-title">experience</h2>
+            <div class="experience-content">
                 <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">
-                        <span>2023 - Present</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Software Developer</h3>
-                        <p class="company">Company Name</p>
-                        <p class="job-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Fusce volutpat, nisl vel tincidunt interdum, augue est facilisis massa.
-                        </p>
-                        <div class="job-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>AWS</span>
-                        </div>
-                    </div>
+                <div class="experience-item">
+                    <h3 class="job-title">Software Developer</h3>
+                    <p class="company-date">Dexperts Inc | June 2021 - Present</p>
                 </div>
                 
                 <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">
-                        <span>2021 - 2023</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Web Developer</h3>
-                        <p class="company">Company Name</p>
-                        <p class="job-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Fusce volutpat, nisl vel tincidunt interdum, augue est facilisis massa.
-                        </p>
-                        <div class="job-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
+                <div class="experience-item">
+                    <h3 class="job-title">Web Developer</h3>
+                    <p class="company-date">Nepsol Tech | Jan 2021 - April 2022</p>
                 </div>
-                
-                <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">
-                        <span>2020 - 2021</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Intern</h3>
-                        <p class="company">Company Name</p>
-                        <p class="job-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Fusce volutpat, nisl vel tincidunt interdum, augue est facilisis massa.
-                        </p>
-                        <div class="job-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>your.email@example.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Your Location</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -350,7 +252,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Your Name. All Rights Reserved.</p>
+            <p>© 2025 Anil Khatri. All Rights Reserved.</p>
             <p>Designed and built with ❤️</p>
         </div>
     </footer>

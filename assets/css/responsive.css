@@ -1,6 +1,6 @@
 /* 
 ======================
-Responsive Styles
+Responsive Styles - Updated for side-by-side About/Skills layout
 ======================
 */
 
@@ -15,7 +15,7 @@ Responsive Styles
     }
     
     .section-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 }
 
@@ -30,39 +30,36 @@ Responsive Styles
     }
     
     .hero-description {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
-    .about-content {
+    .hero-content {
         flex-direction: column;
         text-align: center;
     }
     
-    .about-image {
-        margin-bottom: var(--spacing-md);
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+    .hero-text {
+        margin-bottom: var(--spacing-lg);
     }
     
-    .social-links {
+    .hero-buttons {
         justify-content: center;
     }
     
-    .project-card {
+    /* Stack About and Skills sections on tablets */
+    .about-skills-wrapper {
         flex-direction: column;
+        gap: var(--spacing-lg);
     }
     
-    .project-image {
-        max-width: 100%;
+    .section-title {
+        text-align: left;
+        display: inline-block;
     }
     
-    .contact-content {
-        flex-direction: column;
-    }
-    
-    .contact-info {
-        margin-bottom: var(--spacing-md);
+    /* Hide social sidebar on tablets */
+    .social-sidebar {
+        display: none;
     }
 }
 
@@ -73,63 +70,52 @@ Responsive Styles
         padding: 0 var(--spacing-md);
     }
     
-    .navbar-items {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--light-color);
-        flex-direction: column;
-        align-items: center;
-        padding: var(--spacing-md) 0;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar-items.active {
-        display: flex;
-    }
-    
-    .navbar-toggle {
-        display: block;
-    }
-    
     .hero h1 {
         font-size: 2rem;
     }
     
     .hero-description {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
-    .hero-cta {
+    .hero-buttons {
         flex-direction: column;
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
+        align-items: center;
+    }
+    
+    .btn-outline {
+        margin-right: 0;
+        width: 200px;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
-    .skills-content {
-        grid-template-columns: 1fr;
+    .project-screen {
+        max-width: 100%;
     }
     
-    .timeline::before {
-        left: 30px;
+    .project-card {
+        padding: var(--spacing-sm);
     }
     
-    .timeline-item {
-        padding-left: 70px;
+    .project-links {
+        flex-direction: column;
+        gap: var(--spacing-xs);
     }
     
-    .timeline-dot {
-        left: 30px;
+    .project-links a {
+        width: 100%;
     }
     
-    .timeline-date {
-        width: 60px;
+    .skill-tag {
         font-size: 0.8rem;
+    }
+    
+    .experience-content {
+        max-width: 100%;
     }
 }
 
@@ -140,23 +126,32 @@ Responsive Styles
     }
     
     .hero-description {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .section-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
-    .skill-items {
-        grid-template-columns: 1fr;
+    .skill-tags {
+        justify-content: flex-start;
     }
     
-    .project-links {
-        flex-direction: column;
-        gap: var(--spacing-xs);
+    .project-title {
+        font-size: 1.3rem;
     }
     
-    .timeline-content h3 {
-        font-size: 1.2rem;
+    .project-screen-header {
+        padding: 0.5rem;
+    }
+    
+    .screen-title {
+        margin-left: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+    
+    .screen-dots span {
+        width: 10px;
+        height: 10px;
     }
 }
