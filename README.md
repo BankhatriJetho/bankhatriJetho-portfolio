@@ -1,7 +1,7 @@
-*** Anil Khatri Portfolio ***
+***Anil Khatri Portfolio***
 A clean, modern personal portfolio website.
 
-*** Features ***
+***Features***
 - Minimalist design with vertical social links sidebar
 - Custom SVG programmer illustration
 - Skills displayed as interactive tags
@@ -9,7 +9,9 @@ A clean, modern personal portfolio website.
 - Fully responsive design for all devices
 - Smooth scrolling and subtle animations
 
-*** Project Structure ***
+
+***Project Structure***
+```
 bankhatriJetho-portfolio/
 ├── assets/
 │   ├── css/
@@ -22,8 +24,8 @@ bankhatriJetho-portfolio/
 ├── index.html
 ├── README.md
 └── .gitignore
-
-*** Technology Stack ***
+```
+***Technology Stack***
 
 HTML5
 CSS3 (Flexbox, CSS Grid, CSS Variables)
